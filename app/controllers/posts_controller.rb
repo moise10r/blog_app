@@ -1,5 +1,4 @@
 class PostController < ApplicationController
-  def index;
-    
+  def index
   end
 end
