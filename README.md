@@ -38,9 +38,14 @@ git clone git@github.com:moise10r/blog_app.git
 # Go Postgres shell user
  sudo -i -u postgres psql
 ```
-
+```sh
+ - rails db:setup
+ and then run
+-  rails db:migrate
 
 ```
+
+```sh
 # Create a user with password
 create user "user_name" with password 'user_password';
 
