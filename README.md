@@ -63,10 +63,21 @@ bundle install
 rails s
 ```
 
+- If you get an issue about webpacker follow the step below: 
+
+
+```sh
+# run 
+bundle install
+# And then run
+bin/rails webpacker:install
+
+```
+
 ### Test
 
 ```sh
-rspec
+rails spec
 ```
 
 ## Authors
