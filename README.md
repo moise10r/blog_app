@@ -63,7 +63,7 @@ bundle install
 rails s
 ```
 
-- If you get a issue about webpacker follow the step below: 
+- If you get an issue about webpacker follow the step below: 
 
 
 ```sh
