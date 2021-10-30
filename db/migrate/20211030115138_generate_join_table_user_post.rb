@@ -1,0 +1,8 @@
+class GenerateJoinTableUserPost < ActiveRecord::Migration[6.1]
+  def change
+    create_join_table :users, :posts, column_options: { null: true }, table_name: :likes do |t|
+      t.index [:user_id, :post_id]
+
+      t.timestamps
+  end
+end
