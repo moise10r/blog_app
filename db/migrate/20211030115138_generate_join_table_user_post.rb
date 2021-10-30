@@ -4,5 +4,6 @@ class GenerateJoinTableUserPost < ActiveRecord::Migration[6.1]
       t.index [:user_id, :post_id]
 
       t.timestamps
+    end
   end
 end
