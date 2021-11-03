@@ -1,5 +1,5 @@
 <h1>Show the details of one user<h1><div class="profile-container">
-  <%= render partial: "user-card", locals: { user: @author_id } %>
+  <%= render partial: "user_card", locals: { user: @author_id } %>
   <div class="bio">
     <h5 class="bio-heading">Bio</h5>
     <p class="bio-text">
@@ -12,7 +12,7 @@
     <% (1..3).each do |p| %>
       <li class="post-item">
         <%= link_to user_post_path(@author_id, p) do %>
-          <%= render partial: "posts/post-card", locals: { post: p } %>
+          <%= render partial: "posts/post_card", locals: { post: p } %>
         <% end %>
       </li>
     <% end %>

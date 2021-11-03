@@ -2,8 +2,7 @@ class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
-  def self.update_counter(post_id)
-    count_likes = Like.where(post_id: post_id).count
-    Post.find_by(id: post_id).update(likes_counter: count_likes)
+  def update_post_likes_counter
+    post.update_column('likes_counter', post.likes_counter + 1)
   end
 end
