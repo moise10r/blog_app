@@ -1,1 +1,21 @@
-<h1>Show the details of one user<h1>
+<h1>Show the details of one user<h1><div class="profile__container">
+  <%= render partial: "user_card", locals: { user: @author_id } %>
+  <div class="bio">
+    <h5 class="bio__heading">Bio</h5>
+    <p class="bio__text">
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+      piece of classical Latin literature from 45 BC, making it over 2000 years old
+      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+    </p>
+  </div>
+  <ul class="post__list">
+    <% (1..3).each do |p| %>
+      <li class="post__item">
+        <%= link_to user_post_path(@author_id, p) do %>
+          <%= render partial: "posts/post_card", locals: { post: p } %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "See all posts", user_posts_path(@author_id), class: "link btn" %>
+</div>
