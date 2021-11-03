@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @auh_id = params[:author_id]
+    @author_id = params[:author_id]
   end
 
   def show
