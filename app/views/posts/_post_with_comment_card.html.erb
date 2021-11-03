@@ -3,10 +3,10 @@
     <%= render partial: "post_card", locals: { post: post } %>
   <% end %>
   <ul class="comment-list">
-    <% (1..3).each do |c| %>
+    <% (1..3).each do |comment| %>
       <li class="comment-item">
-        <span class="comment-item-user"><%= "User #{c}" %>:  </span>
-        <span class="comment-item-comment"><%= "Comment #{c}" %> </span>
+        <span class="comment-item-user"><%= "User #{comment}" %>:  </span>
+        <span class="comment-item-comment"><%= "Comment #{comment}" %> </span>
       </li>
     <% end %>
   </ul>
