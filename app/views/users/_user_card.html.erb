@@ -1,9 +1,9 @@
 <div class="profile">
   <div class="profile-picture">
-    <%= image_tag 'https://i.pravatar.cc/150?img=2', alt: "profile" %>
+    <%= image_tag "https://ui-avatars.com/api/?name=#{user}&background=random", alt: "profile" %>
   </div>
   <div class="profile-details">
-    <h6 class="profile-details-name"><%= "user #{user}".capitalize %></h6>
-    <div class="posts-counter">Number of posts: 3</div>
+    <h6 class="profile-details-name"><%= "#{user}".capitalize %></h6>
+    <div class="posts-counter">Number of posts: 5</div>
   </div>
 </div>
