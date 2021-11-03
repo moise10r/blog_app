@@ -1,0 +1,13 @@
+<li class="post-comment-item">
+  <%= link_to user_post_path(@author_id, post) do %>
+    <%= render partial: "post_card", locals: { post: post } %>
+  <% end %>
+  <ul class="comment-list">
+    <% (1..3).each do |c| %>
+      <li class="comment-item">
+        <span class="comment-item-user"><%= "User #{c}" %>:  </span>
+        <span class="comment-item-comment"><%= "Comment #{c}" %> </span>
+      </li>
+    <% end %>
+  </ul>
+</li>
