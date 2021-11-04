@@ -61,6 +61,13 @@ bundle install
 ### Run
 
 ```sh
+# run 
+rails db:seed
+# And then run
+rails db:shema:load
+```
+
+```sh
 rails s
 ```
 
