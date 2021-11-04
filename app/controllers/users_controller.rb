@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = ["moise","rushanika", "Nganulo"]
+    @users = %w[moise rushanika Nganulo]
   end
 
   def show
