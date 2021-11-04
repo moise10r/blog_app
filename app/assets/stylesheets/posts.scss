@@ -1,0 +1,48 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.post {
+  padding: 0.8rem;
+  border: 1px solid #000;
+  display: none;
+}
+
+.post-title {
+  font-size: 12rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.post-text {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+
+.post-likes-comments-counter {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.comment-list {
+  border: 1px solid #000;
+}
+
+.post-comment {
+  margin-bottom: 5rem;
+}
+
+.post-comment-item .post {
+  margin-bottom: 0;
+}
+
+.post .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.header .post-title {
+  margin-bottom: 0;
+  font-size: 1.85rem;
+}

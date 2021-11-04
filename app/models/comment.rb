@@ -3,8 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
   validates :text, presence: true
 
-  def self.update_counter(post_id)
-    count_comments = Comment.where(post_id: post_id).count
-    Post.find_by(id: post_id).update(comments_counter: count_comments)
+  def update_post_comments_counter
+    post.update_column('comments_counter', post.comments_counter + 1)
   end
 end

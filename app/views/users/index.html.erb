@@ -1,1 +1,11 @@
-<h1>Here there is a list of users</h1>
+<div class="profile-container">
+  <ul class="profile-list">
+    <% @users.each do |u| %>
+      <li class="profile-item">
+        <%= link_to user_path(u) do %>
+          <%= render partial: "user_card", locals: { user: u } %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
