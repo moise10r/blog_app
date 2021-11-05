@@ -11,5 +11,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  private
 
+  def comment_params
+    params.require(:data).permit(:text)
+  end
 end
