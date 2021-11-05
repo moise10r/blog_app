@@ -13,4 +13,15 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def create
+    new_post = Post.new(post_params)
+    current_user.posts << new_post
+
+    if new_post.save
+      redirect_to user_posts_path(new_post.user.id), notice: 'Post created!'
+    else
+      flash.now[:alert] = 'Failed to publish post!'
+      render :new
+    end
+  end
 end
