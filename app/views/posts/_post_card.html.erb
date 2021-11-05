@@ -1,6 +1,6 @@
 <div class="post">
-  <h5 class="post__title"><%= post.title.capitalize %></h5>
-  <p class="post__text"><%= post.text.truncate(22) %>  </p>
+  <h5 class="post-title"><%= post.title.capitalize %></h5>
+  <p class="post-text"><%= post.text.truncate(22) %>  </p>
   <div class="likes-comments-counter">
     <%= render partial: "posts/no_of_comments", locals: { total_comments: post.comments.size } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: post.likes.size } %>
   </div>
