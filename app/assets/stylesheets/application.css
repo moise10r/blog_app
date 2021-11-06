@@ -14,193 +14,189 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
 
- *,
- *::before,
- *::after {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
- }
- 
- html {
-   font-size: 10px;
- }
- 
- body {
-   font-size: 62.5%;
-   font-family: 'Poppins', sans-serif;
- }
- 
- a {
-   text-decoration: none;
-   color: inherit;
- }
- 
- img {
-   object-fit: cover;
-   max-width: 100%;
- }
- 
- li {
-   list-style: none;
- }
- 
- .mt-2 {
-   margin-top: 2rem;
- }
- 
- .mt-1 {
-   margin-top: 1rem;
- }
- 
- .mb-2 {
-   margin-bottom: 2rem;
- }
- 
- .mb-1 {
-   margin-bottom: 1rem;
- }
- 
- .btn {
-   display: block;
-   margin: 0 auto;
-   padding: 0.85rem 1.5rem;
-   cursor: pointer;
-   background: #cf0136;
-   color: #fff;
-   outline: none;
-   border: none;
- }
- 
- .link {
-   display: block;
-   font-size: 1.8rem;
-   width: 15rem;
-   margin: 0 auto;
- }
- 
- .comment {
-   margin-top: 1rem;
-   width: 15rem;
-   font-size: 1.8rem;
-   margin-left: auto;
-   text-align: center;
- }
- 
- .nav {
-   padding: 2rem;
-   width: 100%;
-   margin: 0 auto;
- }
- 
- .nav-list {
-   display: flex;
-   justify-content: flex-end;
- }
- 
- .nav-link {
-   font-size: 1.85rem;
-   background: #1016f0;
-   color: #fff;
-   padding: 0.85rem 1.2rem;
- }
- 
- .container {
-   padding: 0 2rem;
- }
- 
- .profile-container {
-   max-width: 55rem;
-   margin: 0 auto;
-   width: 100%;
-   padding: 2.5rem 0;
- }
- 
- .bio {
-   border: 1px solid #000;
-   padding: 0.8rem 0.8rem 1.5rem;
- }
- 
- .bio-heading {
-   font-size: 2.5rem;
-   margin-bottom: 2rem;
- }
- 
- .bio-text {
-   font-size: 1.65rem;
-   font-weight: 300;
- }
- 
- .comment-list {
-   padding: 0.8rem;
- }
- 
- .comment-item {
-   font-size: 1.85rem;
- }
- 
- .form-container {
-   max-width: 50rem;
-   margin: 0 auto;
-   width: 100%;
-   padding: 2.5rem 0;
- }
- 
- .form-header {
-   font-size: 1.8rem;
-   text-align: center;
-   font-weight: 400;
-   margin-bottom: 1.5rem;
- }
- 
- .field {
-   margin-bottom: 1.8rem;
- }
- 
- .label {
-   display: block;
-   margin-bottom: 1.5rem;
-   font-size: 1.35rem;
- }
- 
- .input {
-   width: 100%;
-   padding: 0.8rem 0.5rem;
- }
- 
- .text_area {
-   padding: 0.8rem 0.5rem;
- }
- 
- .like-container {
-   display: flex;
-   justify-content: flex-end;
- }
- 
- .liked {
-   font-size: 1.85rem;
-   background: #3e43e8;
-   color: #fff;
-   padding: 0.5rem;
- }
- 
- .comment-container {
-   display: flex;
-   justify-content: flex-end;
-   text-align: right;
-   width: 100%;
- }
- 
- .comment-container a {
-   color: #fff;
-   background: red;
-   margin-top: 0.5rem;
-   padding: 1rem;
-   font-size: 1.5rem;
- }
- 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  background: #cf0136;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.link {
+  display: block;
+  font-size: 1.8rem;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.comment {
+  margin-top: 1rem;
+  width: 15rem;
+  font-size: 1.8rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+.nav {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-size: 1.85rem;
+  background: #1016f0;
+  color: #fff;
+  padding: 0.85rem 1.2rem;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.profile-container {
+  max-width: 55rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.bio {
+  border: 1px solid #000;
+  padding: 0.8rem 0.8rem 1.5rem;
+}
+
+.bio-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.bio-text {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+
+.comment-item {
+  font-size: 1.85rem;
+}
+
+.form-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.form-header {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.8rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+}
+
+.text_area {
+  padding: 0.8rem 0.5rem;
+}
+
+.like-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.liked {
+  font-size: 1.85rem;
+  background: #3e43e8;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.comment-container a {
+  color: #fff;
+  background: red;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
 .post {
   padding: 0.8rem;
   border: 1px solid #000;
@@ -224,6 +220,7 @@
 
 .comment-list {
   border: 1px solid #000;
+  padding: 0.8rem;
 }
 
 .post-comment {
