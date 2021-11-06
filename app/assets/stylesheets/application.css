@@ -221,6 +221,7 @@ li {
 .comment-list {
   border: 1px solid #000;
   padding: 0.8rem;
+  margin-bottom: 4rem;
 }
 
 .post-comment {
@@ -228,7 +229,8 @@ li {
 }
 
 .post-comment-item .post {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 4rem;
 }
 
 .post .header {

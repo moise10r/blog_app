@@ -3,13 +3,13 @@
     <div class="header">
       <h5 class="post-title"><%= @post.title.capitalize %> by <%= @user.name %></h5>
       <div class="post-likes_comments_counter">
-        <%= render partial: "posts/no_of_comments", locals: { total_comments: @post.comments.size } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: @post.likes.size } %>
+        <%= render partial: "posts/no_of_comments", locals: { total_comments: @post.comments_counter } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: @post.likes_counter } %>
       </div>
     </div>
     <%= render partial: "like_view", locals: { post: @post } %>
     <p class="post-text"><%= @post.text %> </p>
   </div>
-  <% if @post.comments.size > 0 %>
+  <% if @post.comments_counter > 0 %>
     <%= render partial: "comment_card", locals: { comments: @post.comments } %>
   <% end %>
   <%= render partial: "comment_form", locals: { post: @post } %>

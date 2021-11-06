@@ -1,7 +1,7 @@
-<div class="post mb-2 mt-2">
+<div class="post">
   <h5 class="post-title"><%= post.title.capitalize %></h5>
   <p class="post-text"><%= post.text.truncate(22) %>  </p>
   <div class="post-likes_comments_counter">
-    <%= render partial: "posts/no_of_comments", locals: { total_comments: post.comments.size } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: post.likes.size } %>
+    <%= render partial: "posts/no_of_comments", locals: { total_comments: post.comments_counter } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: post.likes_counter } %>
   </div>
 </div>

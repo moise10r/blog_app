@@ -16,11 +16,12 @@ class PostsController < ApplicationController
   def create
     new_post = Post.new(post_params)
     current_user.posts << new_post
-
+    new_post.update_post_counter
     if new_post.save
-      redirect_to user_posts_path(new_post.user.id), notice: 'Post created!'
+      flash[:notice] = 'Post created!'
+      redirect_to user_posts_path(new_post.user.id)
     else
-      flash.now[:alert] = 'Failed to publish post!'
+      flash.now[:alert] = 'Failed to create post!'
       render :new
     end
   end

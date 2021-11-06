@@ -1,5 +1,5 @@
 <ul class="comment-list">
-  <% comments.each do |c| %>
+  <% comments.includes(:user).each do |c| %>
     <li class="comment-item">
       <span class="comment-item-user"><%= c.user.name  %>:  </span>
       <span class="comment-item-comment"><%= c.text %> </span>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_091337) do
+ActiveRecord::Schema.define(version: 2021_11_06_104803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_11_06_091337) do
   create_table "comments", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
-    t.text "text", default: "short comment", null: false
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2021_11_06_091337) do
 
   create_table "posts", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "title", default: "title", null: false
-    t.text "text", default: "short text", null: false
+    t.string "title", null: false
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "comments_counter", default: 0, null: false
@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 2021_11_06_091337) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", default: "name", null: false
+    t.string "name", null: false
     t.string "photo", default: "https://i.pravatar.cc/150?img=2", null: false
-    t.text "bio", default: "short bio", null: false
+    t.text "bio", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "posts_counter", default: 0, null: false

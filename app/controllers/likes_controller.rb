@@ -4,9 +4,10 @@ class LikesController < ApplicationController
     new_like = Like.create(user_id: current_user.id, post_id: post.id)
     new_like.update_post_likes_counter
     if new_like.save
-      redirect_to user_post_path(post.user.id, post.id), notice: 'Liked'
+      flash[:notice] = 'Liked'
     else
-      redirect_to user_post_path(post.user.id, post.id), alert: 'Not liked!'
+      flash[:alert] = 'Not liked!'
     end
+    redirect_to user_post_path(post.user.id, post.id)
   end
 end
