@@ -10,3 +10,4 @@ class LikesController < ApplicationController
     end
     redirect_to user_post_path(post.user.id, post.id)
   end
+end
