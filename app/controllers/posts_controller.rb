@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:author_id])
+    @user = User.find(params[:user_id])
     @posts = @user.top_most_recent_posts
   end
 
   def show
-    @user = User.find(params[:author_id])
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
 
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     end
   end
 
-   private
+  private
 
   def post_params
     params.require(:post).permit(:title, :text)
