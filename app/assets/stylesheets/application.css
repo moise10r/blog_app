@@ -7,11 +7,11 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require-* statement.
+ * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require-tree .
- *= require-self
+ *= require_tree .
+ *= require_self
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -44,6 +45,22 @@ img {
 
 li {
   list-style: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
 .btn {
@@ -64,12 +81,38 @@ li {
   margin: 0 auto;
 }
 
+.comment {
+  margin-top: 1rem;
+  width: 15rem;
+  font-size: 1.8rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+.nav {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-size: 1.85rem;
+  background: #a7e83e;
+  color: #fff;
+  padding: 0.85rem 1.2rem;
+}
+
 .container {
   padding: 0 2rem;
 }
 
 .profile-container {
-  max-width: 100rem;
+  max-width: 55rem;
   margin: 0 auto;
   width: 100%;
   padding: 2.5rem 0;
@@ -78,7 +121,6 @@ li {
 .bio {
   border: 1px solid #000;
   padding: 0.8rem 0.8rem 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .bio-heading {
@@ -91,13 +133,68 @@ li {
   font-weight: 300;
 }
 
-.comment-list {
-  padding: 0.8rem;
-  border: 1px solid #000;
-}
-
 .comment-item {
   font-size: 1.85rem;
+}
+
+.form-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.form-header {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.8rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+}
+
+.text_area {
+  padding: 0.8rem 0.5rem;
+}
+
+.like-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.liked {
+  font-size: 1.85rem;
+  background: #a7e83e;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.comment-container a {
+  color: #fff;
+  background: red;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 .post {
@@ -116,13 +213,18 @@ li {
   font-weight: 300;
 }
 
-.post-likes-comments-counter {
+.post-likes_comments_counter {
   text-align: right;
   font-size: 1.5rem;
 }
 
+.comment-list {
+  border: 1px solid #000;
+  padding: 0.8rem;
+}
+
 .post-comment {
-  margin-bottom: 5rem;
+  margin: 2rem;
 }
 
 .post-comment-item .post {
@@ -145,16 +247,12 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
 }
 
 .profile-picture {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-right: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .profile-picture img {
@@ -173,10 +271,6 @@ li {
   margin-bottom: 2.5rem;
 }
 
-.post-item {
-  margin-bottom: 1rem;
-}
-
 .profile-details-name {
   font-size: 2.95rem;
   padding: 0;
@@ -184,7 +278,7 @@ li {
   font-weight: 400;
 }
 
-.posts-counter {
+.posts_counter {
   text-align: right;
   font-size: 1.8rem;
 }
