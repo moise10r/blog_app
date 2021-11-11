@@ -216,3 +216,17 @@
    text-decoration: underline;
  }
  
+ .comment-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.comment-container a {
+  color: #fff;
+  background: red;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
