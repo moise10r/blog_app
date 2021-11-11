@@ -16,7 +16,6 @@ class PostsController < ApplicationController
   def create
     new_post = Post.new(post_params)
     current_user.posts << new_post
-    new_post.update_post_counter
     if new_post.save
       flash[:notice] = 'Post created!'
       redirect_to user_posts_path(new_post.user.id)
