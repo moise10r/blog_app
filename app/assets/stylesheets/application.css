@@ -245,3 +245,62 @@
   padding: 1rem;
   font-size: 1.5rem;
 }
+
+.post {
+  padding: 0.8rem;
+  border: 1px solid #000;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.post-text {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+
+.post-likes_comments_counter {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.comment-list {
+  border: 1px solid #000;
+}
+
+.post-list {
+  margin-bottom: 2.5rem;
+}
+
+.posts_counter {
+  text-align: right;
+  font-size: 1.8rem;
+}
+
+.post-comment {
+  margin-bottom: 5rem;
+}
+
+.post-comment-item .post {
+  margin-bottom: 0;
+}
+
+.post .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.header .post-title {
+  margin-bottom: 0;
+  font-size: 1.85rem;
+}
