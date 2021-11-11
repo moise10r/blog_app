@@ -58,6 +58,37 @@
    border: none;
  }
  
+ .nav {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-right: 1.4rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  background: #1016f0;
+  color: #fff;
+  padding: 0.25rem 1.2rem;
+}
+
+.logout {
+  background-color: #b11c59;
+}
+
+
  .comment {
    margin-top: 1rem;
    width: 15rem;
