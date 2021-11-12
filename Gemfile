@@ -36,9 +36,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-    # Use to preview mail in the browser
+  # Use to preview mail in the browser
   gem 'letter_opener'
-  
+
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
