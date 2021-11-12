@@ -1,8 +1,8 @@
 <ul class="comment-list">
-  <% comments.includes(:user).each do |c| %>
+  <% comments_with_user(comments).each do |c| %>
     <li class="comment-item">
-      <span class="comment-item-user"><%= c.user.name  %>:  </span>
-      <span class="comment-item-comment"><%= c.text %> </span>
+      <span class="comment-item-user"><%= c.user.name %>:</span>
+      <span class="comment-item-comment"><%= c.text %></span>
     </li>
   <% end %>
 </ul>
