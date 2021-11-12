@@ -1,17 +1,18 @@
 <div class="profile-container">
   <div class="post">
     <div class="header">
-      <h5 class="post-title"><%= @post.title.capitalize %> by <%= @user.name %></h5>
+      <%= link_to user_posts_path(@user.id), class: "title-link" do %>
+        <h5 class="post-title"><%= capitalize(@post.title) %> by <%= capitalize(@user.name) %></h5>
+      <% end %>
       <div class="post-likes_comments_counter">
         <%= render partial: "posts/no_of_comments", locals: { total_comments: @post.comments_counter } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: @post.likes_counter } %>
       </div>
     </div>
     <%= render partial: "like_view", locals: { post: @post } %>
-    <p class="post-text"><%= @post.text %> </p>
+    <p class="post-text"><%= @post.text %></p>
   </div>
-  <% if @post.comments_counter > 0 %>
+  <% if can_display_comments?(@post.comments_counter) %>
     <%= render partial: "comment_card", locals: { comments: @post.comments } %>
   <% end %>
   <%= render partial: "comment_form", locals: { post: @post } %>
-
 </div>
