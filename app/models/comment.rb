@@ -11,7 +11,7 @@ class Comment < ApplicationRecord
 
   private
 
-  # def trim_text
-  #   self.text = text.strip if text.present?
-  # end
+  def trim_text
+    self.text = text.strip if text.present?
+  end
 end
