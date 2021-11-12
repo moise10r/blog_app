@@ -25,11 +25,10 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 body {
-  font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -68,17 +67,10 @@ li {
   margin: 0 auto;
   padding: 0.85rem 1.5rem;
   cursor: pointer;
-  background: #cf0136;
+  background: #0074aa;
   color: #fff;
   outline: none;
   border: none;
-}
-
-.link {
-  display: block;
-  font-size: 1.8rem;
-  width: 15rem;
-  margin: 0 auto;
 }
 
 .comment {
@@ -89,30 +81,12 @@ li {
   text-align: center;
 }
 
-.nav {
-  padding: 2rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-link {
-  font-size: 1.85rem;
-  background: #a7e83e;
-  color: #fff;
-  padding: 0.85rem 1.2rem;
-}
-
 .container {
   padding: 0 2rem;
 }
 
 .profile-container {
-  max-width: 55rem;
+  max-width: 50rem;
   margin: 0 auto;
   width: 100%;
   padding: 2.5rem 0;
@@ -133,6 +107,11 @@ li {
   font-weight: 300;
 }
 
+.comment-list {
+  padding: 0.8rem;
+  border: 1px solid #000;
+}
+
 .comment-item {
   font-size: 1.85rem;
 }
@@ -147,8 +126,8 @@ li {
 .form-header {
   font-size: 1.8rem;
   text-align: center;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .field {
@@ -177,16 +156,9 @@ li {
 
 .liked {
   font-size: 1.85rem;
-  background: #a7e83e;
+  background: #3e43e8;
   color: #fff;
   padding: 0.5rem;
-}
-
-.comment-container {
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  width: 100%;
 }
 
 .comment-container a {
@@ -197,9 +169,101 @@ li {
   font-size: 1.5rem;
 }
 
-.post {
-  padding: 0.8rem;
-  border: 1px solid #000;
+.form-links {
+  font-size: 1.45rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.form-links a {
+  margin-bottom: 2rem;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+.check-label {
+  font-size: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.caution {
+  font-size: 1.7rem;
+}
+
+.notices {
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.trash-btn {
+  background: #760724;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.box-icon {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.trash-container {
+  text-align: right;
+}
+
+.title-link:hover {
+  text-decoration: underline;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.nav {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-right: 1.4rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  background: #0074aa;
+  color: #fff;
+  padding: 0.25rem 1.2rem;
+}
+
+.logout {
+  background-color: #b11c59;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .post-title {
@@ -218,19 +282,21 @@ li {
   font-size: 1.5rem;
 }
 
-.comment-list {
-  border: 1px solid #000;
-  padding: 0.8rem;
-  margin-bottom: 4rem;
+.post-list {
+  margin-bottom: 2.5rem;
+}
+
+.posts_counter {
+  text-align: right;
+  font-size: 1.8rem;
 }
 
 .post-comment {
-  margin: 2rem;
+  margin-bottom: 5rem;
 }
 
 .post-comment-item .post {
-  margin-bottom: 0.5rem;
-  margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .post .header {
@@ -252,14 +318,9 @@ li {
 }
 
 .profile-picture {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin-right: 2.5rem;
-}
-
-.profile-picture img {
-  width: 100%;
-  height: 100%;
 }
 
 .profile-details {
@@ -269,18 +330,9 @@ li {
   padding: 2rem 0.8rem 1rem;
 }
 
-.post-list {
-  margin-bottom: 2.5rem;
-}
-
 .profile-details-name {
   font-size: 2.95rem;
   padding: 0;
   margin: 0;
   font-weight: 400;
-}
-
-.posts_counter {
-  text-align: right;
-  font-size: 1.8rem;
 }

@@ -1,9 +1,9 @@
 <div class="like-container">
-  <% if post.likes.exists?(user_id: current_user.id) %>
+  <% if post_liked_by?({ post: post, id: current_user.id }) %>
     <b class= "liked">Liked by you</b>
   <% else %>
-    <%= form_with url: post_like_create_path(post.id) do |form| %>
-      <%= form.submit "Like", class: "like btn" %>
+    <%= button_to post_likes_path(post.id), method: :create do %>
+      <i class="bx bxs-like like"></i>
     <% end %>
   <% end %>
 </div>

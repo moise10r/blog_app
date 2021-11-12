@@ -1,9 +1,9 @@
-<div class="profile">
+<div class="profile mb-2">
   <div class="profile-picture">
     <%= image_tag "https://ui-avatars.com/api/?name=#{user.name}&background=random", alt: "profile" %>
   </div>
   <div class="profile-details">
-    <h6 class="profile-details-name"><%= user.name.capitalize %></h6>
-    <div class="posts_counter">Number of posts:<%= user.posts_counter %></div>
+    <h6 class="profile-details-name"><%= capitalize(user.name) %></h6>
+    <div class="posts_counter"><%= t("post.total", count: user.posts_counter) %></div>
   </div>
 </div>
