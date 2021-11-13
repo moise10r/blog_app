@@ -1,6 +1,6 @@
-<div class="form-container">
+<div class="form__container">
   <%= form_with url: posts_path, model: @post do |f| %>
-    <h6 class="form-header">Create new post</h6>
+    <h6 class="form__header">Create new post</h6>
     <div class="field">
       <%= f.text_field :title, class: "input", required: true, placeholder: "Title", value: nil %>
     </div>

@@ -1,115 +1,72 @@
-# Blog
+# Rails Blog App
 
-![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
+> "Rails Blog App" a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-> Classic blog website
-![home](https://user-images.githubusercontent.com/57562869/140238853-9d9df4a6-c94f-4749-b28c-4070d56976bc.png)
+## Built with
 
-
-Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
-
-## Built With
-
+- Ruby
 - Ruby on Rails
+
+# Screenshot
+![screenshot](https://github.com/olawale-o/rails_blog_app/blob/forms/app/assets/images/screenshot.png?raw=true")
+## Getting started
+
+#### Prerequisites
+
+- Ruby
+- Rspec
+- Rails
 - PostgreSQL
 
-## Getting Started
+#### To get a local copy of this repository kindly follow the steps below.
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-- [Ruby](https://www.ruby-lang.org/en/)
-- [Rails & Postgres](https://www.howtoforge.com/tutorial/ubuntu-ruby-on-rails/?fbclid=IwAR3G0lCOxctwwOCAXmJKAma8p-IciYv2qwwRUyOX-pULaB_7lmrGgMMK8G4)
+- Kindly make sure you have **ruby**, **Ruby on rails** and **PostgreSQL** installed
+- Scroll to top of this current repository
+- Click on the `Code` button with background color green on the right end corner
+- Click on the clipboard icon on the extreme right of the dropdown to copy the repository link
+- In your local PC, open your terminal or command prompt in the folder you would like to clone this repository into
+- Type `git clone (copied link)` on the currently opened terminal or command prompt
+- Remember to change `(copied link)` to `git@github.com:olawale-o/rails_blog_app.git` which is the name of the repository
 
 ### Setup
-
-- Make sure you have Ruby on Rails set up properly on your computer
-- Clone or download this repo on your machine
-```sh
-git clone git@github.com:moise10r/blog_app.git
-~ cd blog_app
-
 ```
-
-
-### Development Database
-
-```sh
-# Go Postgres shell user
- sudo -i -u postgres psql
+  rails db:setup
 ```
-```sh
- - rails db:setup
- and then run
--  rails db:migrate
-
-```
-
-```sh
-# Create a user with password
-create user "user_name" with password 'user_password';
-
-```
-
 ### Install
-
-```sh
-bundle install
 ```
-
-### Run
-
-```sh
-# run 
-rails db:seed
-# And then run
-rails db:shema:load
+    bundle install
 ```
-
-```sh
-rails s
+> **_NOTE_** Install webpacker
 ```
-
-- If you get an issue about webpacker follow the step below: 
-
-
-```sh
-# run 
-bundle install
-# And then run
-bin/rails webpacker:install
-
+  rails webpacker:install
 ```
 
 ### Test
-
-```sh
-rails spec
 ```
-
+  bundle exec rspec spec/requests
+```
 ## Authors
 
-👤 **NGANULO RUSHANIKA Moise**
+👤 **Omoogun Olawale**
 
-- GitHub: [@githubhandle](https://github.com/moise10r)
-- Twitter: [@twitterhandle](https://twitter.com/MRushanika)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nganulo-rushanika-mo%C3%AFse-626139197/)
+* Github: [@githubhandle](https://github.com/olawale-o)
+* Twitter: [@twitterhandle](https://twitter.com/ibreaktherules)
+* LinkedIn: [LinkedIn](https://www.linkedin.com/in/olawaleomoogun/)
 
-## 🤝 Contributing
+
+👤 **Polina Stamenova**
+- GitHub: [@githubhandle](https://github.com/PolinaStamenova)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/polina-stamenova-a60766112/)
+
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page.](https://github.com/olawale-o/rails_blog_app/issues)
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## Acknowledgements
 
 - Microverse
-
-## License
-
-[MIT](./LICENSE)
