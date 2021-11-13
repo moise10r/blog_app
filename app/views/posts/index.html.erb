@@ -1,7 +1,7 @@
-<div class="profile-container">
+<div class="profile__container">
   <%= render partial: "users/user_card", locals: { user: @user } %>
-    <ul class="post-comment">
-      <% (1..6).each do |p| %>
+    <ul class="post__comment">
+      <% @posts.each do |p| %>
         <%= render partial: "post_with_comment_card", locals: { post: p } %>
       <% end %>
     </ul>

@@ -4,34 +4,51 @@
 .post {
   padding: 0.8rem;
   border: 1px solid #000;
-  display: none;
 }
 
-.post-title {
-  font-size: 12rem;
+.post__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post__header a :hover {
+  text-decoration: underline;
+}
+
+.post__title {
+  font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 400;
 }
 
-.post-text {
+.post__text {
   font-size: 1.65rem;
   font-weight: 300;
 }
 
-.post-likes-comments-counter {
+.post__likes_comments_counter {
   text-align: right;
   font-size: 1.5rem;
 }
 
-.comment-list {
+.comment__list {
   border: 1px solid #000;
 }
 
-.post-comment {
+.post__list {
+  margin-bottom: 2.5rem;
+}
+
+.posts_counter {
+  text-align: right;
+  font-size: 1.8rem;
+}
+
+.post__comment {
   margin-bottom: 5rem;
 }
 
-.post-comment-item .post {
+.post__comment-item .post {
   margin-bottom: 0;
 }
 
@@ -42,7 +59,11 @@
   margin-bottom: 2.5rem;
 }
 
-.header .post-title {
+.post .header a:hover {
+  text-decoration: underline;
+}
+
+.header .post__title {
   margin-bottom: 0;
   font-size: 1.85rem;
 }
