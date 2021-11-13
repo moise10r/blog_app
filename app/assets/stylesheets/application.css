@@ -25,10 +25,11 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 body {
+  font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -67,7 +68,7 @@ li {
   margin: 0 auto;
   padding: 0.85rem 1.5rem;
   cursor: pointer;
-  background: #0074aa;
+  background: #008a3e;
   color: #fff;
   outline: none;
   border: none;
@@ -85,7 +86,7 @@ li {
   padding: 0 2rem;
 }
 
-.profile-container {
+.profile__container {
   max-width: 50rem;
   margin: 0 auto;
   width: 100%;
@@ -97,33 +98,32 @@ li {
   padding: 0.8rem 0.8rem 1.5rem;
 }
 
-.bio-heading {
+.bio__heading {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-.bio-text {
+.bio__text {
   font-size: 1.65rem;
   font-weight: 300;
 }
 
-.comment-list {
+.comment__list {
   padding: 0.8rem;
-  border: 1px solid #000;
 }
 
-.comment-item {
+.comment__item {
   font-size: 1.85rem;
 }
 
-.form-container {
+.form__container {
   max-width: 50rem;
   margin: 0 auto;
   width: 100%;
   padding: 2.5rem 0;
 }
 
-.form-header {
+.form__header {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 300;
@@ -149,7 +149,7 @@ li {
   padding: 0.8rem 0.5rem;
 }
 
-.like-container {
+.like__container {
   display: flex;
   justify-content: flex-end;
 }
@@ -161,29 +161,21 @@ li {
   padding: 0.5rem;
 }
 
-.comment-container a {
-  color: #fff;
-  background: red;
-  margin-top: 0.5rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
-
-.form-links {
+.form__links {
   font-size: 1.45rem;
   text-align: center;
   margin-top: 1.5rem;
 }
 
-.form-links a {
+.form__links a {
   margin-bottom: 2rem;
 }
 
-.form-links a:hover {
+.form__links a:hover {
   text-decoration: underline;
 }
 
-.check-label {
+.check__label {
   font-size: 1.5rem;
 }
 
@@ -211,128 +203,19 @@ li {
   cursor: pointer;
 }
 
+.like-btn {
+  background: #11199d;
+  margin-left: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 .box-icon {
   font-size: 3rem;
   color: #fff;
 }
 
-.trash-container {
+.trash__container {
   text-align: right;
-}
-
-.title-link:hover {
-  text-decoration: underline;
-}
-
-.comment-container {
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  width: 100%;
-}
-
-.nav {
-  padding: 2rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-item {
-  margin-right: 1.4rem;
-}
-
-.nav-item:last-child {
-  margin-right: 0;
-}
-
-.nav-link {
-  font-size: 1.5rem;
-  background: #0074aa;
-  color: #fff;
-  padding: 0.25rem 1.2rem;
-}
-
-.logout {
-  background-color: #b11c59;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.post-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-.post-text {
-  font-size: 1.65rem;
-  font-weight: 300;
-}
-
-.post-likes_comments_counter {
-  text-align: right;
-  font-size: 1.5rem;
-}
-
-.post-list {
-  margin-bottom: 2.5rem;
-}
-
-.posts_counter {
-  text-align: right;
-  font-size: 1.8rem;
-}
-
-.post-comment {
-  margin-bottom: 5rem;
-}
-
-.post-comment-item .post {
-  margin-bottom: 0;
-}
-
-.post .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
-}
-
-.header .post-title {
-  margin-bottom: 0;
-  font-size: 1.85rem;
-}
-
-.profile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.profile-picture {
-  width: 100px;
-  height: 100px;
-  margin-right: 2.5rem;
-}
-
-.profile-details {
-  flex: 1;
-  font-size: 2.5rem;
-  border: 1px solid #000;
-  padding: 2rem 0.8rem 1rem;
-}
-
-.profile-details-name {
-  font-size: 2.95rem;
-  padding: 0;
-  margin: 0;
-  font-weight: 400;
 }

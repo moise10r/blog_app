@@ -1,9 +1,6 @@
 {
-  "name": "blog_app",
+  "name": "rails-blog-app",
   "private": true,
-  "scripts": {
-    "stylelint": "stylelint \"**/*.{css,scss}\""
-  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
@@ -13,12 +10,16 @@
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
+  "scripts": {
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "lint": "npm run stylelint"
+  },
   "version": "0.1.0",
   "devDependencies": {
-    "stylelint": "13.x",
-    "stylelint-config-standard": "21.x",
-    "stylelint-csstree-validator": "1.x",
-    "stylelint-scss": "3.x",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
     "webpack-dev-server": "^3"
   }
 }

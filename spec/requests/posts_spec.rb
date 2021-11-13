@@ -1,16 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
+  signin_user
   describe 'GET /index' do
     before(:each) do
-      user = User.create(name: 'wale', bio: 'short bio')
       post = Post.new(title: 'Post 1', text: 'Post 1 content')
       comment = Comment.new(text: 'Comment 1')
-      user.posts << post
-      post.update_post_counter
+      @user.posts << post
       post.comments << comment
-      user.comments << comment
-      get user_posts_path(user.id)
+      @user.comments << comment
+      get user_posts_path(@user.id)
     end
     it 'should return http status code 200' do
       expect(response).to have_http_status(200)
@@ -24,20 +23,18 @@ RSpec.describe 'Posts', type: :request do
 
     it 'should include Post 1, Number of posts:1 in the body' do
       expect(response.body).to include('Post 1')
-      expect(response.body).to include('Number of posts:1')
+      expect(response.body).to include('Number of posts: 1')
     end
   end
 
   describe 'GET /show' do
     before(:each) do
-      user = User.create(name: 'wale', bio: 'short bio')
       post = Post.new(title: 'Post 1', text: 'Post 1 content')
       comment = Comment.create(text: 'Comment 1')
-      user.posts << post
-      post.update_post_counter
+      @user.posts << post
       post.comments << comment
-      user.comments << comment
-      get user_post_path(user.id, post.id)
+      @user.comments << comment
+      get user_post_path(@user.id, post.id)
     end
     it 'should return http status code 200' do
       expect(response).to have_http_status(200)
@@ -51,6 +48,9 @@ RSpec.describe 'Posts', type: :request do
 
     it 'should include like in the body' do
       expect(response.body).to include('Like')
+      expect(response.body).to match(/User/)
+      expect(response.body).to include('Comment 1')
+      expect(response.body).to match(/user/)
     end
   end
 end

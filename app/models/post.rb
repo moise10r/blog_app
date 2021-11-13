@@ -9,6 +9,7 @@ class Post < ApplicationRecord
   validates_numericality_of :likes_counter, only_integer: true, greater_than_or_equal: 0
 
   after_create :update_post_counter
+  after_destroy :update_post_counter_after_destroy
   before_validation :trim_text
 
   def update_post_counter
@@ -17,6 +18,10 @@ class Post < ApplicationRecord
 
   def most_recent_comments(limit = 5)
     comments.order(created_at: :desc).limit(limit)
+  end
+
+  def update_post_counter_after_destroy
+    user.update_column('posts_counter', user.posts_counter - 1)
   end
 
   private

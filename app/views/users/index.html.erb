@@ -1,8 +1,8 @@
-<div class="profile-container">
-  <ul class="profile-list">
+<div class="profile__container">
+  <ul class="profile__list">
     <% @users.each do |u| %>
-      <li class="profile-item">
-        <%= link_to user_path(u.id) do %>
+      <li class="profile__item">
+        <%= link_to user_path(u.id), id: "user_#{u.id}" do %>
           <%= render partial: "user_card", locals: { user: u } %>
         <% end %>
       </li>

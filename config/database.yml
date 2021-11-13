@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Blog_App_development2
+  database: rails_blog_app_development
   host: localhost
   port: 5432
   username: moise_dev
@@ -33,7 +33,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: Blog_App
+  #username: rails_blog_app
 
   # The password associated with the postgres role (username).
   #password:
@@ -61,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Blog_App_test2
+  database: rails_blog_app_test
   host: localhost
   port: 5432
   username: moise_dev
@@ -89,6 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: Blog_App_production
-  username: Blog_App
-  password: <%= ENV['BLOG_APP_DATABASE_PASSWORD'] %>
+  database: rails_blog_app_production
+  username: rails_blog_app
+  password: <%= ENV['RAILS_BLOG_APP_DATABASE_PASSWORD'] %>

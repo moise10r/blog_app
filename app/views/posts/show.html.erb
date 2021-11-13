@@ -1,18 +1,26 @@
-<div class="profile-container">
+<div class="profile__container">
   <div class="post">
     <div class="header">
-      <%= link_to user_posts_path(@user.id), class: "title-link" do %>
-        <h5 class="post-title"><%= capitalize(@post.title) %> by <%= capitalize(@user.name) %></h5>
+      <%= link_to user_posts_path(@user.id) do %>
+        <h5 class="post__title"><%= capitalize(@post.title) %> by <%= capitalize(@user.name) %></h5>
       <% end %>
-      <div class="post-likes_comments_counter">
+      <div class="post__likes_comments_counter">
         <%= render partial: "posts/no_of_comments", locals: { total_comments: @post.comments_counter } %>, <%= render partial: "posts/no_of_likes", locals: { total_likes: @post.likes_counter } %>
       </div>
     </div>
-    <%= render partial: "like_view", locals: { post: @post } %>
-    <p class="post-text"><%= @post.text %></p>
+    <div class="like__container">
+      <% if can? :destroy, @post %>
+        <%= button_to post_path(@post.id), method: :delete, class: "trash-btn" do %>
+          <i class='bx bx-trash-alt box-icon'></i>
+        <% end %>
+      <% end %>
+      <%= render partial: "like_view", locals: { post: @post } %>
+    </div>
+    <p class="post__text"><%= @post.text %> </p>
   </div>
   <% if can_display_comments?(@post.comments_counter) %>
     <%= render partial: "comment_card", locals: { comments: @post.comments } %>
   <% end %>
   <%= render partial: "comment_form", locals: { post: @post } %>
+
 </div>
