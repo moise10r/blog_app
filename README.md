@@ -85,7 +85,7 @@ bin/rails webpacker:install
 ### Test
 
 ```sh
-rails spec
+bundle exec rspec spec
 ```
 
 ## Authors
