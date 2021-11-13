@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  signin_user
   describe 'GET /index' do
     before(:each) do
-      User.create(name: 'Wale', bio: 'bio', posts_counter: 0)
       get users_path
     end
 
@@ -18,17 +18,15 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should include Wale in the body' do
-      expect(response.body).to include('Wale')
+      expect(response.body).to match(/User/)
     end
   end
 
   describe 'GET /show' do
     before(:each) do
-      user = User.create(name: 'wale', bio: 'short bio')
       post = Post.create(title: 'Post 1', text: 'Post 1 content')
-      user.posts << post
-      post.update_post_counter
-      get user_path(user.id)
+      @user.posts << post
+      get user_path(@user.id)
     end
 
     it 'should return http status code 200' do
@@ -43,8 +41,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'should include Post 1 short bio and Number of posts:1 in the body' do
       expect(response.body).to include('Post 1')
-      expect(response.body).to include('Number of posts:1')
-      expect(response.body).to include('short bio')
+      expect(response.body).to include('Number of posts: 1')
     end
   end
 end
