@@ -43,7 +43,7 @@
 
 ### Test
 ```
-  bundle exec rspec spec/requests
+  bundle exec rspec spec
 ```
 ## Authors
 
