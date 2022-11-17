@@ -1,6 +1,6 @@
 # Blog.
 
-![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet).
 
 > Classic blog website
 ![home](https://user-images.githubusercontent.com/57562869/140238853-9d9df4a6-c94f-4749-b28c-4070d56976bc.png)
