@@ -1,4 +1,4 @@
-# Blog.
+# Blog..
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet).
 
